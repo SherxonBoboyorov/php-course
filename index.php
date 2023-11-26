@@ -21,20 +21,24 @@
 
 // switch bu hisoblash;
 
-$x = 52;
-$y = 5;
-
 /* 
     and - va,
     or - yoki,
     not - teskari / yo'q
 */
 
-if ($x == $y) {
-    echo 'x teng y';
-}else {
-    echo 'teng emas';
-}
+// $x = 52;
+// $y = 51;
+
+// if ($x == $y) {
+//     echo 'x teng y teng';
+// }elseif ($x > $y) {
+//     echo 'x y dan katta';
+// }elseif ($x < $y) {
+//     echo "x y dan kichkina";
+// }else {
+//     echo "x teng emas y ga";
+// }
 
 
 ?>
