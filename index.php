@@ -18,6 +18,8 @@
 //         echo "Your favorite color is neither red, blue, green!";
 // }
 
+////////////////////////////////////////////////////////////////////////////
+
 
 // switch bu hisoblash;
 
@@ -40,6 +42,29 @@
 //     echo "x teng emas y ga";
 // }
 
+
+//////////////////////////////////////////////////////////////////////////////
+
+
+$rang = 'sariq  ';
+
+switch($rang) {
+    case 'yashil':
+        echo "yashil rangga teng";
+        break;
+    case 'qizil':
+        echo "qizil rangga teng";
+        break;
+    case 'oq':
+    case 'qora':
+        echo "oq rangga teng";
+        break;
+    case 'kok':
+        echo "kok rangga teng";
+        break;
+    default:
+        echo "bizda bunaqa rang yuq";
+}
 
 ?>
 
