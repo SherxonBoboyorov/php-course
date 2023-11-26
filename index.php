@@ -43,28 +43,68 @@
 // }
 
 
-//////////////////////////////////////////////////////////////////////////////
+//////////// switch
 
 
-$rang = 'sariq  ';
+// $rang = 'sariq  ';
 
-switch($rang) {
-    case 'yashil':
-        echo "yashil rangga teng";
-        break;
-    case 'qizil':
-        echo "qizil rangga teng";
-        break;
-    case 'oq':
-    case 'qora':
-        echo "oq rangga teng";
-        break;
-    case 'kok':
-        echo "kok rangga teng";
-        break;
-    default:
-        echo "bizda bunaqa rang yuq";
-}
+// switch($rang) {
+//     case 'yashil':
+//         echo "yashil rangga teng";
+//         break;
+//     case 'qizil':
+//         echo "qizil rangga teng";
+//         break;
+//     case 'oq':
+//     case 'qora':
+//         echo "oq rangga teng";
+//         break;
+//     case 'kok':
+//         echo "kok rangga teng";
+//         break;
+//     default:
+//         echo "bizda bunaqa rang yuq";
+// }
+
+
+
+
+////////// for example lops
+
+
+// for($x = 1; $x <= 100; $x++) {
+//     echo $x . '<br>';
+// }
+
+
+////////// while example
+
+// $x = 1;
+
+// while($x <= 5)  {
+//     echo  $x . "<br>";
+//     $x++;
+// }
+
+
+///////// froeach example 
+
+// $ruyhat = ['qizil', 'sariq', 'oq', 'qora'];
+
+
+// foreach($ruyhat as $element)
+// {
+//     echo $element . '<br>';
+// }
+
+
+// $names = array("Peter" => "25", "Suhrob" => "19", "Sherxon" => "20");
+
+// foreach($names as $name=>$age) {
+//     echo $name . ' ' . $age . '<br>';
+// }
+    
+
 
 ?>
 
