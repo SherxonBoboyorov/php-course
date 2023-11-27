@@ -118,11 +118,17 @@
 
 
 
-/////////// functions 
+/////////// Functions  - funksiyalar
 
 
 
+// function ekrangaChiqarish($ism, $til) {
+//     echo $ism . ' - ' . $til . "<br>";
+// } 
 
+// ekrangaChiqarish('Sherxon', "PHP");
+// ekrangaChiqarish('Suhrob', "VUE JS");
+// ekrangaChiqarish('Olimjon akam', 'Backent developer');
 
 
 
