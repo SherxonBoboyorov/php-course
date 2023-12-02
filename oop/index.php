@@ -1,12 +1,8 @@
 <?php 
 
-// Access Modifiers
+// Abstract Classes
 
-// public
-// protected
-// private
-
-class Car {
+abstract class Car {
     public $model;
     protected $year;
     private $km;
@@ -62,10 +58,6 @@ $tesla = new ElectiricCar('tesla', 2022, 5000);
 $tesla->km = 7777;
 
 echo $tesla->getReverse();
-
-
-
-
 
 
 ?>
