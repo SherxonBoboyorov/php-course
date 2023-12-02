@@ -30,34 +30,28 @@ abstract class Car {
     }
 }
 
-
-class ElectiricCar extends Car {
-
-  public $km;
-
-    public function getYear()
-    {
-      return $this->year;
-    }
-
-    public function getReverse()
-    {
-      return $this->reverse();
-    }
-
-    public function getKm()
-    {
-      return $this->km;
-    }
+class ElectricCar extends Car {
 }
 
+$lucid = new ElectricCar('lucid', 2022, 10);
 
-$chevy = new Car('chevrolet', 2019, '180000');
+var_dump($lucid);
 
-$tesla = new ElectiricCar('tesla', 2022, 5000);
-$tesla->km = 7777;
 
-echo $tesla->getReverse();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ?>
