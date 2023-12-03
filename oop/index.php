@@ -35,11 +35,8 @@ class ElectricCar extends Car {
 
 $lucid = new ElectricCar('lucid', 2022, 10);
 
-var_dump($lucid);
 
-
-
-
+  var_dump($lucid);
 
 
 
