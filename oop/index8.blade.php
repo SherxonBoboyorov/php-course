@@ -4,37 +4,37 @@
 // Static
 
 
-class Dog 
-{
-    public $name;
-    public static $weight = '25 kg';  // default
+// class Dog 
+// {
+//     public $name;
+//     public static $weight = '25 kg';  // default
 
 
-    const BREED = "Doberman";
+//     const BREED = "Doberman";
 
-    public function bark()
-    {
+//     public function bark()
+//     {
 
-     return self::BREED;
-    }
+//      return self::BREED;
+//     }
 
-    public function run()
-    {
-      return $this->name;
-    }
+//     public function run()
+//     {
+//       return $this->name;
+//     }
 
-    public static function eat()
-    {
-       return 'Eating';
-    }
-}
+//     public static function eat()
+//     {
+//        return 'Eating';
+//     }
+// }
 
 
-// $bingo = new Dog();
-// $bingo->name = 'Bingo';
-// echo $bingo->bark();
+// // $bingo = new Dog();
+// // $bingo->name = 'Bingo';
+// // echo $bingo->bark();
 
-echo Dog::BREED;
+// echo Dog::BREED;
 
 
 
