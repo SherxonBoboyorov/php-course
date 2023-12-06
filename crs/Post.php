@@ -12,9 +12,9 @@ class Post
     public static function getAll()
     {
         $stmt = self::$pdo->prepare("SELECT * FROM posts");
+        $stmt->setFetchMode(PDO::FETCH_CLASS, 'Post');
         $stmt->execute();
         $posts = $stmt->fetchAll();
-
 
         return $posts;
     }
