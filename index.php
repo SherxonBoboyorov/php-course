@@ -1,11 +1,9 @@
 <?php 
 
 
-require_once 'bootstrap.php';
+require_once 'config/bootstrap.php';
 
 $posts = Post::getAll();
-
-var_dump($posts);
 
 ?>
 
@@ -18,12 +16,13 @@ var_dump($posts);
 </head>
 <body>
     <h1>Opp Blog</h1>
+    <a href="create.php">Create Post</a>
 
     <ul>
         <?php foreach($posts as $post) : ?>
         <li>
-            <h4><?= $post->id . ' - ' . $post->title ?></h4>
-            <h4><?= $post->body ?></h4>
+            <a href="post.php?id=<?= $post->id ?>"><h4><?= $post->id . ' - ' . $post->title ?></h4></a>
+            <p><?= $post->body ?></p>
         </li>
         <?php endforeach; ?>
     </ul>

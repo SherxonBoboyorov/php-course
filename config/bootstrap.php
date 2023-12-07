@@ -7,8 +7,6 @@ $pdo = $database->connect();
 Post::$pdo = $pdo;
 
 
-echo 'successs';
-
 
 
 ?>
