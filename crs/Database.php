@@ -14,6 +14,7 @@ class Database
         $this->database = $database;
         $this->username = $username;
         $this->password = $password;
+        $this->password = $password;
 
         $this->connect();
     }
@@ -30,6 +31,7 @@ class Database
             echo "Connection failed: " . $e->getMessage();
         }
     }
+
 
     
 }

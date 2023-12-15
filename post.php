@@ -22,6 +22,7 @@ $post = Post::getById($post_id);
         <h1><?= $post->id . ' - ' . $post->title ?></h1>
         <p><?= $post->body ?></p>
         <small><?= $post->created_at ?></small>
+        <small><?= $post->updated_at ?></small>
     </div>
 
 </body>
