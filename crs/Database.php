@@ -29,11 +29,10 @@ class Database
                 catch(PDOException $e)
             {
             echo "Connection failed: " . $e->getMessage();
+
+            echo "19.01.2024"; // bu shunchaki githubda branch ni tekshirish uchun qilindi
+            
         }
-        echo "welcome to tashkent";
-
-
-         echo "<br><br>";
     }
 
 
