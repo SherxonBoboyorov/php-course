@@ -30,7 +30,10 @@ class Database
             {
             echo "Connection failed: " . $e->getMessage();
         }
-        echo "BU yer git hubni test qilish uchun yaratilgan edi";
+        echo "welcome to tashkent";
+
+
+         echo "<br><br>";
     }
 
 
