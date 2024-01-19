@@ -25,6 +25,7 @@ $posts = Post::getAll();
             <p><?= $post->body ?></p>
         </li>
         <?php endforeach; ?>
+        ddkdkkd
     </ul>
     
 </body>
