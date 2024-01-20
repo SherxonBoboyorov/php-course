@@ -27,6 +27,9 @@ $posts = Post::getAll();
         <?php endforeach; ?>
         ddkdkkd
     </ul>
+
+
+    <div>hello</div>
     
 </body>
 </html>
