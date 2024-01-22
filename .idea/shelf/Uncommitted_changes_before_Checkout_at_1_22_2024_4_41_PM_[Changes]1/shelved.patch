@@ -1,0 +1,90 @@
+Index: index.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?php \r\n\r\n\r\nrequire_once 'config/bootstrap.php';\r\n\r\n$posts = Post::getAll();\r\n\r\n?>\r\n\r\n<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n    <title>Oop Blog</title>\r\n</head>\r\n<body>\r\n    <h1>Opp Blog</h1>\r\n    <a href=\"create.php\">Create Post</a>\r\n\r\n    <ul>\r\n        <?php foreach($posts as $post) : ?>\r\n        <li>\r\n            <a href=\"post.php?id=<?= $post->id ?>\"><h4><?= $post->id . ' - ' . $post->title ?></h4></a>\r\n            <p><?= $post->body ?></p>\r\n        </li>\r\n        <?php endforeach; ?>\r\n        ddkdkkd\r\n    </ul>\r\n\r\n\r\n    <div>hello</div>\r\n    \r\n</body>\r\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/index.php b/index.php
+--- a/index.php	
++++ b/index.php	
+@@ -25,11 +25,6 @@
+             <p><?= $post->body ?></p>
+         </li>
+         <?php endforeach; ?>
+-        ddkdkkd
+     </ul>
+-
+-
+-    <div>hello</div>
+-    
+ </body>
+ </html>
+\ No newline at end of file
+Index: crs/Post.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?php \r\n\r\nclass Post \r\n{\r\n    public static $pdo;\r\n    \r\n    public $id;\r\n    public $title;\r\n    public $body;\r\n    public $created_at;\r\n\r\n    public static function getAll()\r\n    {\r\n        $stmt = self::$pdo->prepare(\"SELECT * FROM posts\");\r\n        $stmt->setFetchMode(PDO::FETCH_CLASS, 'Post');\r\n        $stmt->execute();\r\n        $posts = $stmt->fetchAll();\r\n\r\n        return $posts;\r\n    }\r\n\r\n    public static function getById($id) \r\n    {\r\n        $stmt = self::$pdo->prepare(\"SELECT * FROM posts Where id = ?\");\r\n        $stmt->setFetchMode(PDO::FETCH_CLASS, 'Post');\r\n        $stmt->execute([$id]);\r\n        $post = $stmt->fetch();\r\n\r\n        return $post;\r\n    }\r\n\r\n    public static function create($title, $body)\r\n    {\r\n        $stmt = self::$pdo->prepare(\"INSERT INTO posts (title, body) VALUES (:title, :body)\");\r\n        $stmt->execute([\r\n            'title' => $title,\r\n            'body' => $body,\r\n        ]);\r\n\r\n        $row = $stmt->rowCount();\r\n        return $row;\r\n    }\r\n}\r\n\r\n\r\n\r\n?>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/crs/Post.php b/crs/Post.php
+--- a/crs/Post.php	
++++ b/crs/Post.php	
+@@ -32,9 +32,10 @@
+     public static function create($title, $body)
+     {
+         $stmt = self::$pdo->prepare("INSERT INTO posts (title, body) VALUES (:title, :body)");
++
+         $stmt->execute([
+             'title' => $title,
+-            'body' => $body,
++            'body' => $body
+         ]);
+ 
+         $row = $stmt->rowCount();
+@@ -42,6 +43,4 @@
+     }
+ }
+ 
+-
+-
+ ?>
+\ No newline at end of file
+Index: config/bootstrap.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?php\r\n\r\nrequire_once 'autoload.php';\r\n\r\n$database = new Database('localhost', 'oop', 'root', null);\r\n$pdo = $database->connect();\r\nPost::$pdo = $pdo;\r\n\r\n\r\n\r\n\r\n?>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/config/bootstrap.php b/config/bootstrap.php
+--- a/config/bootstrap.php	
++++ b/config/bootstrap.php	
+@@ -6,7 +6,4 @@
+ $pdo = $database->connect();
+ Post::$pdo = $pdo;
+ 
+-
+-
+-
+ ?>
+\ No newline at end of file
+Index: create.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?php \r\n\r\nrequire_once 'config/bootstrap.php';\r\n\r\nif($_SERVER['REQUEST_METHOD'] == 'POST' ){\r\n    $title = $_POST['title'];\r\n    $body = $_POST['body'];\r\n\r\n   $result =  Post::create($title, $body);\r\n\r\n   if($request == 1) {\r\n        header(\"Location: index.php\");\r\n        exit;\r\n   }\r\n\r\n   echo \"By Sherxon Boboyorov\";\r\n}\r\n\r\n?>\r\n\r\n\r\n\r\n<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n    <title>Create Post</title>\r\n</head>\r\n<body>\r\n\r\n    <form method=\"POst\" action=\"\">\r\n        <h4>Create Post</h4>\r\n        <div>\r\n            <input type=\"text\" name=\"title\" placeholder=\"title\">\r\n        </div><br>\r\n        <div>\r\n            <textarea name=\"body\" cols=\"30\" rows=\"10\" placeholder=\"body\"></textarea>\r\n        </div><br>\r\n        <div>\r\n            <button type=\"submit\">Submit</button>\r\n        </div>\r\n    </form>\r\n        \r\n</body>\r\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/create.php b/create.php
+--- a/create.php	
++++ b/create.php	
+@@ -13,7 +13,6 @@
+         exit;
+    }
+ 
+-   echo "By Sherxon Boboyorov";
+ }
+ 
+ ?>
