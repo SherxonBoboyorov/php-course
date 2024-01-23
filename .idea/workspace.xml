@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bd61e9fa-0cb4-4b4b-a492-34048c1111c6" name="Changes" comment="bazi bir uzgarishlar">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_1_22_2024_4_41_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_1_22_2024_4_41_PM_[Changes]1/shelved.patch" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bootstrap.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bootstrap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/create.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crs/Database.php" beforeDir="false" afterPath="$PROJECT_DIR$/crs/Database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post.php" beforeDir="false" afterPath="$PROJECT_DIR$/post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +69,7 @@
       <workItem from="1705902637125" duration="8000" />
       <workItem from="1705916209756" duration="6825000" />
       <workItem from="1705926772756" duration="963000" />
-      <workItem from="1705985200474" duration="1948000" />
+      <workItem from="1705985200474" duration="5108000" />
     </task>
     <task id="LOCAL-00001" summary="bazi bir uzgarishlar">
       <option name="closed" value="true" />
