@@ -1,12 +1,12 @@
 <?php
 
-
-class Database 
+class Database
 {
-       public $servername;
-       public $database;
-       public $username;
-       public $password;
+
+    public $servername;
+    public $database;
+    public $username;
+    public $password;
 
     public function __construct($servername, $database, $username, $password)
     {
@@ -21,19 +21,18 @@ class Database
     public function connect()
     {
         try {
-            $conn = new PDO("mysql:host=$this->servername;dbname=$this->database", $this->username, $this->password);
+            $conn = new PDO("mysql:host+$this->servername;dbname=$this->database", $this->username, $this->password);
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                return $conn;
-            }
-                catch(PDOException $e)
-            {
+            return $conn;
+        } catch (PDOException $e) {
             echo "Connection failed: " . $e->getMessage();
+
         }
     }
+
+
 
     
 }
 
-
 ?>
-
