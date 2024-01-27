@@ -25,6 +25,8 @@ $post = Post::getById($post_id);
         <small><?= $post->updated_at ?></small>
     </div>
 
+    <div>Hello world</div>
+
 
 
 </body>
