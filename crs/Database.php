@@ -30,6 +30,12 @@ class Database
         }
     }
 
+    public function finish()
+    {
+        $posts = Post::all();
+        return "succesfully";
+    }
+
 
 
     

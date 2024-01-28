@@ -5,6 +5,7 @@ require_once 'config/bootstrap.php';
 
 $posts = Post::getAll();
 
+// bu config pageni chaqirish uchun
 ?>
 
 <!DOCTYPE html>
