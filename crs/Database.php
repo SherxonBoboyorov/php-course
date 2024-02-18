@@ -36,6 +36,12 @@ class Database
         return "succesfully";
     }
 
+    public function update($id)
+    {
+        $post = Post::finfOrFail($id);
+        return "data not found";
+    }
+
 
 
     
