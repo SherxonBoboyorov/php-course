@@ -23,6 +23,7 @@ $post = Post::getById($post_id);
         <p><?= $post->body ?></p>
         <small><?= $post->created_at ?></small>
         <small><?= $post->updated_at ?></small>
+        <div><?= $post->title ?></div>
     </div>
 
     <div>Hello world</div>
