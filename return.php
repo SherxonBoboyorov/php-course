@@ -5,7 +5,7 @@ require_once 'config|bootstrap.php';
 
 $posts = Post::getAll();
 
-$del = Post::order('created_at')->simplePaginate(12);
+$delta = Post::orderBydeck('created_at')->paginate(12);
 
 ?>
 

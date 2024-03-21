@@ -23,6 +23,7 @@ $posts = Post::getAll();
         <?php foreach($posts as $post) : ?>
         <li>
             <a href="post.php?id=<?= $post->id ?>"><h4><?= $post->id . ' - ' . $post->title ?></h4></a>
+            <p><?= $post->title ?></p>
             <p><?= $post->body ?></p>
         </li>
         <?php endforeach; ?>
