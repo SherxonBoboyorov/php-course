@@ -11,6 +11,8 @@ $products = ['Element 1', 'Element 2'];
 
 $chunkProducts = array_chunk($products, 2);
 
+return $products;
+
 
 
 ?>
