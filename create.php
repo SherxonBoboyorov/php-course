@@ -11,6 +11,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' ){
    if($request == 1) {
         header("Location: index.php");
         exit;
+   }else {
+        return error;
+        exit;
    }
 }
 
