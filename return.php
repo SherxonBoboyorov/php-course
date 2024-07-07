@@ -13,7 +13,6 @@ $chunkProducts = array_chunk($products, 2);
 
 return $products;
 
-?>
 
 
 

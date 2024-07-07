@@ -15,6 +15,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' ){
         return error;
         exit;
    }
+
+   return true;
 }
 
 ?>
